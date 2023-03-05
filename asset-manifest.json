@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/userCard-techTest/static/css/main.5ea736a2.css",
+    "main.js": "/userCard-techTest/static/js/main.1831dacc.js",
+    "static/media/bg.png": "/userCard-techTest/static/media/bg.86562350dcaa714a1442.png",
+    "index.html": "/userCard-techTest/index.html",
+    "main.5ea736a2.css.map": "/userCard-techTest/static/css/main.5ea736a2.css.map",
+    "main.1831dacc.js.map": "/userCard-techTest/static/js/main.1831dacc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ea736a2.css",
+    "static/js/main.1831dacc.js"
+  ]
+}
