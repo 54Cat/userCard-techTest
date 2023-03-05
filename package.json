@@ -2,7 +2,7 @@
 	"name": "test-technical",
 	"version": "1.0.0",
 	"description": "",
-	"homepage": "https://54Cat.github.io/test-technical-goit/",
+	"homepage": "https://54Cat.github.io/userCard-techTest/",
 	"main": "index.js",
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
