@@ -6,7 +6,7 @@ export const toDivide = (data) => {
         let newNumber = '';
 
         for(let i = int.length - 1; i >= 0; i--) {
-            if(space == 3) {
+            if(space === 3) {
                 newNumber = ',' + newNumber;
                 space = 0;
             }
