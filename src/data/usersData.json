@@ -1,0 +1,42 @@
+[
+	{
+		"id": 1,
+		"user": "Mango",
+		"avatar": "https://static.vecteezy.com/system/resources/thumbnails/001/503/756/small/boy-face-avatar-cartoon-free-vector.jpg",
+		"tweets": 777,
+		"followers": 100500,
+		"isSubscribe": false
+	},
+	{
+		"id": 2,
+		"user": "Lena",
+		"avatar": "https://i.pinimg.com/564x/ec/dc/7b/ecdc7b4f70701070d04fe4a67f5b5f29--create-your-own-avatar-create-a-cartoon.jpg",
+		"tweets": 102,
+		"followers": 100102,
+		"isSubscribe": false
+	},
+	{
+		"id": 3,
+		"user": "Max",
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuLl7AXB4ij3VjlplYR4r9sCbjfhcULqUU8aJZHy3DXWIiazZZddBGAFnQ2O_CGGyKipE&usqp=CAU",
+		"tweets": 303,
+		"followers": 999999,
+		"isSubscribe": false
+	},
+	{
+		"id": 4,
+		"user": "Lili",
+		"avatar": "https://i.pinimg.com/736x/4b/5d/19/4b5d1954fbb5b6bad18f0ac25c4ab3c3--free-avatars-create-your-own-avatar.jpg",
+		"tweets": 404,
+		"followers": 400809,
+		"isSubscribe": false
+	},
+	{
+		"id": 5,
+		"user": "Ricky",
+		"avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM28QRPIbYPlWF6o3zf-VnkTdaexT1HFhXXKl3KepmEn6ZEyRzIE5ya5NLNn5yq_7QRKM&usqp=CAU",
+		"tweets": 6603,
+		"followers": 597239,
+		"isSubscribe": false
+	}
+]

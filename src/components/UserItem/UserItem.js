@@ -2,34 +2,29 @@ import { Item, AvatarThumb, Avatar, InfoList, InfoItem, Btn } from './UserItemSt
 import { toDivide } from '../Utils/divide';
 import { useEffect, useState } from 'react';
 
-export const UserItem = ({ avatar, tweets, followers }) => {
-
-    const [followerCounter, setFollowerCounter] = useState(() => {
-        return JSON.parse(window.localStorage.getItem('followers')) ?? followers
-    })
-    const [activeBtn, setActiveBtn] = useState((() => {
-        return JSON.parse(window.localStorage.getItem('activeBtn')) ?? false
-    }))
-
-    useEffect(() => {
-      localStorage.setItem('followers', followerCounter); 
-      localStorage.setItem('activeBtn', activeBtn); 
-    }, [followerCounter, activeBtn])
+export const UserItem = ({ userData, updateUser }) => {
+    const { id, tweets, followers, avatar, isSubscribe } = userData;
+    
+    const [followerCounter, setFollowerCounter] = useState(followers)
+    const [isFollow, setFollow] = useState(isSubscribe)
         
-    const toggle = () => {
-        setActiveBtn(!activeBtn)
+    const handleToggle = () => {
+        setFollow(!isFollow)
 
-        if (!activeBtn) {
-            setFollowerCounter(followerCounter + 1)
+        if (!isFollow) {
+            setFollowerCounter(state => state + 1)
         }
         else {
-            setFollowerCounter(followerCounter - 1)
+            setFollowerCounter(state => state - 1)
         }
     }
 
+    useEffect(() => {
+        updateUser(id, isFollow, followerCounter)
+    }, [isFollow, followerCounter])
+    
     return (
         <Item>
-            {/* <BgImg>rfhtrjtrjrtyj</BgImg> */}
             <AvatarThumb>
                 <Avatar src={avatar}></Avatar>
             </AvatarThumb>
@@ -39,8 +34,7 @@ export const UserItem = ({ avatar, tweets, followers }) => {
                 <InfoItem>{toDivide(followerCounter)} Followers</InfoItem>
             </InfoList>
 
-            <Btn className={activeBtn ? 'active' : ''} onClick={toggle}>{activeBtn ? "Follow" : "Following"}</Btn>
-            
+            <Btn type='button' className={isFollow ? 'active' : ''} onClick={handleToggle}>{isFollow ? "Follow" : "Following"}</Btn>
         </Item>
     );
 };

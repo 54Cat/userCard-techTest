@@ -1,16 +1,23 @@
 import UserList from 'components/UserList/UserList';
+import usersData from 'data/usersData.json';
+import { useEffect, useState } from 'react';
 
-export default function Contact() {
-    const userData = [
-        {
-            id: 101,
-            avatar: "https://static.vecteezy.com/system/resources/thumbnails/001/503/756/small/boy-face-avatar-cartoon-free-vector.jpg",
-            tweets: 777,
-            followers: 100500
-        }
-    ];
+export default function UsersCollection() {
+    const [users, setUsersData] = useState(JSON.parse(localStorage.getItem("usersData")) ?? usersData);
 
+    useEffect(() => {
+        localStorage.setItem("usersData", JSON.stringify(users));
+    }, [users]);
+
+    const updateUser = (id, isSubscribe, followers) => {
+        setUsersData((prevState) =>
+            prevState.map((user) =>
+                user.id === id ? { ...user, isSubscribe, followers } : user
+            )
+        );
+    };
+    
     return (  
-        <UserList userData={userData} />
+        <UserList userData={users} updateUser={updateUser} />
     ); 
 }

@@ -4,8 +4,6 @@ import logo from '../../data/img/Logo.png';
 import bg from '../../data/img/bg.png';
 
 export const Item = styled.li`
-    // background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
-    background-color: #4B2A99;
     box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
     border-radius: 20px;
     width: 380px;
@@ -14,16 +12,24 @@ export const Item = styled.li`
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-image: url(${logo}), url(${bg}), linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+    background-repeat: no-repeat;
+    background-position: top 20px left 20px, top 28px left 36px, top left;
+    background-size: auto, auto, auto;
     margin-right: 48px;
     margin-bottom: 48px;
-    
-    background-image: url(${logo}), url(${bg});
-    background-repeat: no-repeat;
-    background-position: top 20px left 20px, top 28px left 36px;
-    background-size: auto, auto;
+    flex-basis: calc((100% - 144px) / 3);
 
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+      
+    &:nth-child(n+6) {
+      margin-bottom: 0;
+    }
+    
     &:last-child { 
-        margin: 0;
+        margin-right: 0px;
     }
 `;
     
@@ -84,6 +90,11 @@ export const Btn = styled.button`
     color: #373737;
     margin-bottom: 36px;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #FBF8FF;
+    }
 
     &.active {
         background-color: #5CD3A8;
