@@ -18,15 +18,6 @@ export const Item = styled.li`
     background-size: auto, auto, auto;
     margin-right: 48px;
     margin-bottom: 48px;
-    flex-basis: calc((100% - 144px) / 3);
-
-    &:nth-child(3n) {
-      margin-right: 0px;
-    }
-      
-    &:nth-child(n+6) {
-      margin-bottom: 0;
-    }
     
     &:last-child { 
         margin-right: 0px;
